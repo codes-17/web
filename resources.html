@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="17codes - Learn coding skills through interactive challenges and structured learning" />
+  <title>17codes - Learn. Build. Grow. Together.</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-white bg-[#0D1017] font-Lexend">
+  <div class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-black py-1 px-3 sticky top-0 z-50">
+      <nav class="flex items-center justify-between bg-black py-5 px-4 rounded-md">
+
+        <!-- Logo -->
+        <a href="#" aria-label="17CODES homepage">
+          <h1 class="Montserrat font-bold text-2xl sm:text-3xl">17CODES</h1>
+        </a>
+
+        <!-- Hamburger Button -->
+        <button id="menu-btn" class="flex flex-col justify-between w-6 h-4 menu-btn md:hidden z-50"
+          aria-label="Toggle menu" aria-expanded="false">
+          <span class="hamburger-line bg-white h-0.5 w-full rounded-sm"></span>
+          <span class="hamburger-line bg-white h-0.5 w-full rounded-sm"></span>
+          <span class="hamburger-line bg-white h-0.5 w-full rounded-sm"></span>
+        </button>
+
+        <!-- Desktop Nav -->
+        <ul class="hidden md:flex items-center gap-6 md:gap-10 lg:gap-12 text-sm sm:text-base">
+          <li><a href="#" class="hover:text-[#2889F4] transition-colors">Home</a></li>
+          <li><a href="./working.html" class="hover:text-[#2889F4] transition-colors">About</a></li>
+          <li><a href="./working.html" class="hover:text-[#2889F4] transition-colors">Resources</a></li>
+          <li><a href="./working.html" class="hover:text-[#2889F4] transition-colors">Challenges</a></li>
+          <li>
+            <a href="https://www.instagram.com/direct/t/17844979248301250">
+              <button
+                class="px-4 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-colors text-sm sm:text-base">
+                Contact Us
+              </button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="md:hidden hidden bg-black px-3 pb-3 rounded-b-md transition-all duration-300">
+        <ul class="flex flex-col gap-4 mt-4 text-sm">
+          <li><a href="#" class="block py-2 hover:text-[#2889F4]">Home</a></li>
+          <li><a href="./working.html" class="block py-2 hover:text-[#2889F4]">About</a></li>
+          <li><a href="./working.html" class="block py-2 hover:text-[#2889F4]">Resources</a></li>
+          <li><a href="./working.html" class="block py-2 hover:text-[#2889F4]">Challenges</a></li>
+          <li>
+            <a href="https://www.instagram.com/direct/t/17844979248301250" class="block">
+              <button class="w-full px-4 py-2 rounded-md bg-blue-600 hover:bg-blue-700 transition-colors">
+                Contact Us
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-10 p-10 flex-grow">
+      <section class="flex flex-col items-center">
+        <h1 class="font-bold text-3xl Kanit m-6">Resources</h1>
+        <div class="card bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in">
+          <div class="flex justify-center mb-4">
+            <img src="./resource-1.png" alt="Image" class="">
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Generative AI For Beginners</h3>
+          <a href="https://microsoft.github.io/generative-ai-for-beginners/#/">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-md cursor-pointer hover:bg-blue-700 transition">
+              Start Now
+            </button>
+          </a>
+        </div>
+        <div id="note" class="mt-20 text-center">
+          More To Be Added <br> Keep Following
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800 text-center text-gray-400">
+      © 2025 17CODES. All rights reserved.
+    </footer>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>

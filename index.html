@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="17codes - Learn coding skills through interactive challenges and structured learning" />
+  <title>17codes - Learn. Build. Grow. Together.</title>
+
+  <!-- Linking the external CSS files -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Tailwind CDN for utility-first CSS framework -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-white">
+  <!-- Header Section -->
+  <header class="bg-black py-1 px-3 sticky top-0 z-50">
+    <nav class="flex items-center justify-between bg-black py-5 px-4 rounded-md">
+
+      <!-- Logo / Brand Title -->
+      <a href="#" aria-label="17CODES homepage">
+        <h1 class="Montserrat font-bold text-2xl sm:text-3xl">17CODES</h1>
+      </a>
+
+      <!-- Hamburger Icon for Mobile -->
+      <button id="menu-btn" class="flex flex-col justify-between w-6 h-4 menu-btn md:hidden z-50"
+        aria-label="Toggle menu" aria-expanded="false">
+        <span class="hamburger-line bg-white h-0.5 w-full rounded-sm"></span>
+        <span class="hamburger-line bg-white h-0.5 w-full rounded-sm"></span>
+        <span class="hamburger-line bg-white h-0.5 w-full rounded-sm"></span>
+      </button>
+
+      <!-- Navigation Links for Desktop -->
+      <ul class="hidden md:flex items-center gap-6 md:gap-10 lg:gap-12 text-sm sm:text-base">
+        <li><a href="#" class="hover:text-[#2889F4] transition-colors">Home</a></li>
+        <li><a href="./working.html" class="hover:text-[#2889F4] transition-colors">About</a></li>
+        <li><a href="./resources.html" class="hover:text-[#2889F4] transition-colors">Resources</a></li>
+        <li><a href="./working.html" class="hover:text-[#2889F4] transition-colors">Challenges</a></li>
+        <li>
+          <a href="https://www.instagram.com/direct/t/17844979248301250">
+            <button class="px-4 py-2 bg-blue-600 rounded-md hover:bg-blue-700 transition-colors text-sm sm:text-base">
+              Contact Us
+            </button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Navigation Links for Mobile -->
+    <div id="mobile-menu" class="md:hidden hidden bg-black px-3 pb-3 rounded-b-md">
+      <ul class="flex flex-col gap-4 mt-4 text-sm transform transition-transform duration-500 ease-in-out">
+        <li><a href="#" class="block py-2 hover:text-[#2889F4]">Home</a></li>
+        <li><a href="./working.html" class="block py-2 hover:text-[#2889F4]">About</a></li>
+        <li><a href="./resources.html" class="block py-2 hover:text-[#2889F4]">Resources</a></li>
+        <li><a href="./working.html" class="block py-2 hover:text-[#2889F4]">Challenges</a></li>
+        <li>
+          <a href="https://www.instagram.com/direct/t/17844979248301250" class="block">
+            <button class="w-full px-4 py-2 rounded-md bg-blue-600 transition-colors">
+              Contact Us
+            </button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Page Content -->
+  <div id="main" class="bg-[#0D1017] text-white px-4 sm:px-6 md:px-10">
+
+    <!-- Hero Section -->
+    <section class="flex flex-col items-center justify-center text-center py-16 sm:py-20 md:min-h-[80vh]">
+      <h2 class="text-5xl sm:text-6xl font-bold mb-4 leading-tight Kanit hero-text">
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan-600 transition-all duration-300 cursor-pointer">
+          Learn. Build. Grow. Together.
+        </span>
+      </h2>
+      <p class="text-base sm:text-lg text-gray-400 mb-6 max-w-xl">
+        Build real-world coding skills through interactive challenges and structured learning.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#getstarted">
+          <button
+            class="border border-blue-600 text-blue-600 px-6 py-3 rounded-md hover:bg-blue-700 hover:text-white transition cursor-pointer btn">
+            Get Started
+          </button>
+        </a>
+        <a href="https://www.instagram.com/17.codes/">
+          <button class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition cursor-pointer btn">
+            Join The Community
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section id="getstarted" class="py-16 scroll-mt-20">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl sm:text-6xl font-bold mb-2 Kanit">Get Started</h2>
+        <p class="text-base sm:text-lg text-gray-300">Choose your domain</p>
+      </div>
+
+      <!-- Domain Cards Section -->
+      <div id="domain-cards" class="text-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+
+        <!-- DSA Card -->
+        <div class="card bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in">
+          <div class="flex justify-center mb-4">
+            <img src="https://www.svgrepo.com/show/353899/algorithm.svg" alt="DSA Icon" class="h-12 w-12">
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Data Structures & Algorithms</h3>
+          <!-- <p class="text-gray-400 mb-4">Start solving coding problems with the right tools and logical thinking from day
+            one.</p> -->
+          <a href="https://nas.io/17.codes">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-md cursor-pointer">Learn More</button>
+          </a>
+        </div>
+
+        <!-- Web Development Card -->
+        <div class="card relative bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in">
+          <span class="absolute top-4 right-4 bg-yellow-500 text-black text-xs px-2 py-1 rounded-full">Coming
+            Soon</span>
+          <div class="flex justify-center mb-4">
+            <img src="https://www.svgrepo.com/show/452228/html-5.svg" alt="Web Dev Icon" class="h-12 w-12">
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Web Development</h3>
+          <!-- <p class="text-gray-400 mb-4">Learn how to create websites using simple languages like HTML, CSS, and
+            JavaScript—no experience needed.</p> -->
+          <a href="./working.html">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-md cursor-pointer">Learn More</button>
+          </a>
+        </div>
+
+        <!-- Python Programming Card -->
+        <div
+          class="hidden relative card bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in">
+          <span class="absolute top-4 right-4 bg-yellow-500 text-black text-xs px-2 py-1 rounded-full">Coming
+            Soon</span>
+          <div class="flex justify-center mb-4">
+            <img src="https://www.svgrepo.com/show/452091/python.svg" alt="Python Icon" class="h-12 w-12">
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Python Programming</h3>
+          <!-- <p class="text-gray-400 mb-4">Start coding with one of the easiest and most powerful languages used in
+            automation and AI.</p> -->
+          <a href="./working.html">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-md cursor-pointer">Learn More</button>
+          </a>
+        </div>
+
+        <!-- Java Programming Card -->
+        <div
+          class="hidden relative card bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in">
+          <span class="absolute top-4 right-4 bg-yellow-500 text-black text-xs px-2 py-1 rounded-full">Coming
+            Soon</span>
+          <div class="flex justify-center mb-4">
+            <img src="https://www.svgrepo.com/show/452234/java.svg" alt="Java Icon" class="h-12 w-12">
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Java Programming</h3>
+          <!-- <p class="text-gray-400 mb-4">Understand the basics of Java, one of the most widely-used languages in mobile
+            and backend development.</p> -->
+          <a href="./working.html">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-md cursor-pointer">Learn More</button>
+          </a>
+        </div>
+
+        <!-- Artificial Intelligence Card -->
+        <div class="hidden card bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in">
+          <div class="flex justify-center mb-4">
+            <img src="https://www.svgrepo.com/show/445500/ai.svg" alt="AI Icon" class="h-12 w-12">
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Artificial Intelligence</h3>
+          <!-- <p class="text-gray-400 mb-4">Discover how machines can mimic human thinking and make smart decisions using
+            data.</p> -->
+          <a href="./working.html">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-md cursor-pointer">Learn More</button>
+          </a>
+        </div>
+
+        <!-- Machine Learning Card -->
+        <div
+          class="hidden relative card bg-[#1A1E28] p-6 py-10 rounded-2xl shadow-md hover:shadow-xl transition fade-in">
+          <span class="absolute top-4 right-4 bg-yellow-500 text-black text-xs px-2 py-1 rounded-full">Coming
+            Soon</span>
+          <div class="flex justify-center mb-4">
+            <img src="https://www.svgrepo.com/show/374172/machine-learning.svg" alt="ML Icon" class="h-12 w-12">
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Machine Learning</h3>
+          <!-- <p class="text-gray-400 mb-4">Begin learning how computers can recognize patterns and improve with
+            experience—no prior math required.</p> -->
+          <a href="./working.html">
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-md cursor-pointer">Learn More</button>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Show More Button -->
+      <div class="text-center mt-8">
+        <button id="show-more-btn" class="text-[#2889F4] border border-[#2889F4] px-6 py-2 rounded-md">
+          Show More
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="py-8 mt-12 border-t border-gray-800 text-center text-gray-400">
+      © 2025 17CODES. All rights reserved.
+    </footer>
+  </div>
+
+  <!-- Linking the external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+
+</html>
