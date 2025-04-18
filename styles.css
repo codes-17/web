@@ -1,0 +1,76 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Font Utility */
+.Montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.Kanit{
+    font-family: "Kanit","Montserrat","Inter",sans-serif;
+}
+
+/* Navbar Glass Effect */
+.nav {
+  backdrop-filter: blur(20px);
+}
+
+/* Button Styles */
+.btn {
+  color: white;
+  text-align: center;
+  border: 1px solid #0d2065;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  min-width: 130px;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.4s, border-color 0.4s, color 0.4s;
+  display: flex;
+}
+
+.btn:hover {
+  background-color: #1e368e;
+}
+
+/* Mobile Menu Transition */
+#mobile-menu {
+  transition: all 0.3s ease-in-out;
+}
+
+#mobile-menu.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Hamburger Animation */
+#menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(6px);
+}
+
+#menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+#menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-6px);
+}
+
+
+
+/* Press Interaction */
+#menu-toggle:active {
+  transform: scale(0.95);
+  transition: transform 0.15s;
+}
+
+/* Theme Toggle SVG Smooth */
+.dark-toggle svg,
+.light-toggle svg {
+  transition: all 0.3s ease-in-out;
+}
+
