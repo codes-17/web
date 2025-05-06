@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>17codes - Resources</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0d2065",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body
+    class="scroll-smooth bg-gradient-to-b from-[#e5f2ff] via-white to-[#e5f2ff] dark:from-[#0f172a] dark:via-[#1e293b] dark:to-[#0f172a] text-primary dark:text-white min-h-screen transition-all duration-300 bg-white dark:bg-[#1e293b]">
+
+    <!-- Navbar -->
+    <header class="fixed w-full top-0 z-50">
+        <div class="nav m-4 flex justify-between items-center shadow-md rounded-xl px-4 py-3">
+
+            <!-- Logo -->
+            <div class="flex flex-col leading-tight">
+                <a href="#">
+                    <h1 class="font-bold text-xl sm:text-2xl text-primary dark:text-white">17CODES</h1>
+                </a>
+                <span class="text-[10px] text-primary dark:text-white/70 font-medium text-right">by 17LABS</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="./index.html" class="hover:text-black dark:hover:text-white">Home</a>
+                <a href="./work.html" class="hover:text-black dark:hover:text-white">About</a>
+                <a href="./resources.html" class="hover:text-black dark:hover:text-white">Resources</a>
+                <a href="./work.html" class="hover:text-black dark:hover:text-white">Challenges</a>
+                <a href="./work.html" class="hover:text-black dark:hover:text-white">Contact</a>
+            </nav>
+
+            <!-- Right Buttons -->
+            <div class="flex items-center space-x-4">
+                <!-- Theme Toggle -->
+                <div class="flex items-center gap-2">
+                    <button type="button" class="dark-toggle" aria-label="Enable Dark Mode">
+                        <span
+                            class="group inline-flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-200 dark:hover:bg-white/10">
+                            <svg class="w-5 h-5 text-primary dark:text-white" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button type="button" class="light-toggle hidden" aria-label="Enable Light Mode">
+                        <span
+                            class="group inline-flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-200 dark:hover:bg-white/10">
+                            <svg class="w-5 h-5 text-primary dark:text-white" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path d="M12 2v2"></path>
+                                <path d="M12 20v2"></path>
+                                <path d="m4.93 4.93 1.41 1.41"></path>
+                                <path d="m17.66 17.66 1.41 1.41"></path>
+                                <path d="M2 12h2"></path>
+                                <path d="M20 12h2"></path>
+                                <path d="m6.34 17.66-1.41 1.41"></path>
+                                <path d="m19.07 4.93-1.41 1.41"></path>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+
+                <!-- Join Us Button -->
+                <button class="btn bg-[#0d2065] dark:bg-white dark:text-[#0d2065] hidden md:flex"
+                    onclick="scrollToCommunity()">
+                    Join Us
+                </button>
+
+                <!-- Hamburger -->
+                <button id="menu-toggle" class="hamburger md:hidden flex flex-col gap-1 transition-all duration-300">
+                    <span
+                        class="bar w-6 h-0.5 bg-primary dark:bg-white rounded origin-center transition-all duration-300"></span>
+                    <span
+                        class="bar w-6 h-0.5 bg-primary dark:bg-white rounded origin-center transition-all duration-300"></span>
+                    <span
+                        class="bar w-6 h-0.5 bg-primary dark:bg-white rounded origin-center transition-all duration-300"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="md:hidden hidden opacity-0 max-h-0 scale-95 transition-all duration-300 ease-in-out flex-col space-y-4 bg-white dark:bg-[#1a1a2e] mx-4 mt-2 p-4 rounded-lg shadow-md text-primary dark:text-white">
+            <a href="./index.html" class="block">Home</a>
+            <a href="./work.html" class="block">About</a>
+            <a href="./resources.html" class="block">Resources</a>
+            <a href="./work.html" class="block">Challenges</a>
+            <a href="./work.html" class="block">Contact</a>
+            <button class="btn bg-[#0d2065] dark:bg-white dark:text-[#0d2065] mt-2 text-center w-full"
+                onclick="scrollToCommunity()">Join Us</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <!-- Resource Cards Section -->
+    <section class="px-6 md:px-16 py-">
+        <div class="max-w-7xl mx-auto pt-32 sm:pt-30 px-6 md:px-16 text-center">
+            <!-- <div class="text-center pt-32 sm:pt-30 px-6 md:px-16 sm:min-h-screen"> -->
+            <h1 class="text-2xl pb-10 sm:text-3xl md:text-4xl font-semibold text-primary dark:text-white Kanit">
+                All Your Tech Resources in One Place
+            </h1>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Card 1 -->
+            <div
+                class="bg-[#f9fafb] dark:bg-[#1f2937] p-6 rounded-xl shadow hover:shadow-lg transition-all cursor-pointer text-center sm-hidden border border-black-200">
+                <h3 class="text-xl font-bold text-primary dark:text-white mb-2">100 Days of DSA Challenge</h3>
+                <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">
+                    Master DSA in 100 days with daily coding challenges.
+                </p>
+                <div class="flex flex-wrap gap-3 flex justify-center">
+                    <a
+                        href="https://www.instagram.com/reel/DEoNWZ1zx0g/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><button
+                            class="btn bg-[#0d2065] text-white px-4 py-2 rounded hover:bg-[#0a174f]">Watch
+                            Video</button>
+                    </a>
+                    <a href="https://nas.io/17.codes/challenges"><button
+                            class="btn border border-[#0d2065] text-[#0d2065] dark:border-white dark:text-white px-4 py-2 rounded hover:bg-[#e5f2ff] dark:hover:bg-white/10">Learn
+                            More</button></a>
+
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-[#f9fafb] dark:bg-[#1f2937] p-6 rounded-xl shadow hover:shadow-lg transition-all cursor-pointer text-center border border-black-200">
+                <h3 class="text-xl font-bold text-primary dark:text-white mb-2">Company wise DSA Questions</h3>
+                <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">
+                    Top DSA questions asked by leading tech companies.
+                </p>
+                <div class="flex flex-wrap gap-3 flex justify-center">
+                    <a
+                        href="https://www.instagram.com/reel/DFo2J5kzYT8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                        <button class="btn bg-[#0d2065] text-white px-4 py-2 rounded hover:bg-[#0a174f]">Watch
+                            Video</button>
+                    </a>
+                    <a href="https://github.com/krishnadey30/LeetCode-Questions-CompanyWise">
+                        <button
+                            class="btn border border-[#0d2065] text-[#0d2065] dark:border-white dark:text-white px-4 py-2 rounded hover:bg-[#e5f2ff] dark:hover:bg-white/10">Learn
+                            More</button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-[#f9fafb] dark:bg-[#1f2937] p-6 rounded-xl shadow hover:shadow-lg transition-all cursor-pointer text-center border border-black-200">
+                <h3 class="text-xl font-bold text-primary dark:text-white mb-2">Google's Guide for Placements</h3>
+                <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">
+                    Official tips from Google to ace your placement.
+                </p>
+                <div class="flex flex-wrap gap-3 flex justify-center">
+                    <a href="https://www.instagram.com/reel/DF9YJ-3p7zP/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                        <button class="btn bg-[#0d2065] text-white px-4 py-2 rounded hover:bg-[#0a174f]">Watch
+                            Video</button>
+                    </a>
+                    <a href="https://techdevguide.withgoogle.com/paths/data-structures-and-algorithms/">
+                        <button
+                            class="btn border border-[#0d2065] text-[#0d2065] dark:border-white dark:text-white px-4 py-2 rounded hover:bg-[#e5f2ff] dark:hover:bg-white/10">Learn
+                            More</button>
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#f9fafb] dark:bg-[#1f2937] p-6 rounded-xl shadow hover:shadow-lg transition-all cursor-pointer text-center border border-black-200">
+                <h3 class="text-xl font-bold text-primary dark:text-white mb-2">Resume Guide</h3>
+                <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">
+                    Build a strong tech resume.
+                </p>
+                <div class="flex flex-wrap gap-3 flex justify-center">
+                    <button class="btn bg-[#0d2065] text-white px-4 py-2 rounded hover:bg-[#0a174f]">Watch
+                        Video</button>
+                    <button
+                        class="btn border border-[#0d2065] text-[#0d2065] dark:border-white dark:text-white px-4 py-2 rounded hover:bg-[#e5f2ff] dark:hover:bg-white/10">Learn
+                        More</button>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#f9fafb] dark:bg-[#1f2937] p-6 rounded-xl shadow hover:shadow-lg transition-all cursor-pointer text-center border border-black-200">
+                <h3 class="text-xl font-bold text-primary dark:text-white mb-2">Google's DSA Course</h3>
+                <p class="text-sm text-gray-700 dark:text-gray-300 mb-4">
+                    Google’s DSA mastery course.
+                </p>
+                <div class="flex flex-wrap gap-3 flex justify-center">
+                    <button class="btn bg-[#0d2065] text-white px-4 py-2 rounded hover:bg-[#0a174f]">Watch
+                        Video</button>
+                    <button
+                        class="btn border border-[#0d2065] text-[#0d2065] dark:border-white dark:text-white px-4 py-2 rounded hover:bg-[#e5f2ff] dark:hover:bg-white/10">Learn
+                        More</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="py-6 border-t border-gray-200 dark:border-neutral-700">
+            <div class="flex flex-wrap justify-between items-center gap-2">
+                <div>
+                    <p class="text-xs text-primary dark:text-white">
+                        © 2025 17CODES.
+                    </p>
+                </div>
+                <!-- End Col -->
+
+                <!-- List -->
+                <ul class="flex flex-wrap items-center">
+                    <li
+                        class="inline-block relative pe-4 text-xs last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-1.5 before:-translate-y-1/2 before:size-[3px] before:rounded-full before:bg-gray-400 dark:text-neutral-500 dark:before:bg-neutral-600">
+                        <a class="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400"
+                            href="https://www.instagram.com/17.codes/">
+                            Instagram
+                        </a>
+                    </li>
+                    <li
+                        class="inline-block relative pe-4 text-xs last:pe-0 last-of-type:before:hidden before:absolute before:top-1/2 before:end-1.5 before:-translate-y-1/2 before:size-[3px] before:rounded-full before:bg-gray-400 dark:text-neutral-500 dark:before:bg-neutral-600">
+                        <a class="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400"
+                            href="https://t.me/code_at17">
+                            Telegram
+                        </a>
+                    </li>
+                    <li class="inline-block pe-4 text-xs">
+                        <a class="text-xs text-gray-500 underline hover:text-gray-800 hover:decoration-2 focus:outline-hidden focus:decoration-2 dark:text-neutral-500 dark:hover:text-neutral-400"
+                            href="https://discord.gg/MBnfnM7vX4">
+                            Discord
+                        </a>
+                    </li>
+                </ul>
+                <!-- End List -->
+            </div>
+        </div>
+    </footer>
+    <!-- ========== END FOOTER ========== -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
